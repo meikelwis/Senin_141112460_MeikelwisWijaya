@@ -1,0 +1,15 @@
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\obj\Debug\Latihan_1_1.csprojResolveAssemblyReference.cache
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\obj\Debug\Latihan_1_no_1.Form1.resources
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\obj\Debug\Latihan_1_1.csproj.GenerateResource.Cache
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\bin\Debug\Latihan_1_1.exe.config
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\bin\Debug\Latihan_1_1.exe
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\bin\Debug\Latihan_1_1.pdb
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\obj\Debug\Latihan_1_1.Properties.Resources.resources
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\obj\Debug\Latihan_1_1.exe
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan 1 no 1\obj\Debug\Latihan_1_1.pdb
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_1_1\bin\Debug\Latihan_1_1.exe.config
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.exe
+E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.pdb
+E:\College\Framework Lanjutan\temp\Senin_141112460_MeikelwisWijaya\Latihan_1_1\bin\Debug\Latihan_1_1.exe.config
+E:\College\Framework Lanjutan\temp\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.exe
+E:\College\Framework Lanjutan\temp\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.pdb
