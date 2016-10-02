@@ -32,15 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblRMax = new System.Windows.Forms.Label();
+            this.lblRMin = new System.Windows.Forms.Label();
+            this.vSBMin = new System.Windows.Forms.VScrollBar();
             this.lblMax = new System.Windows.Forms.Label();
             this.vSBMax = new System.Windows.Forms.VScrollBar();
             this.lblMin = new System.Windows.Forms.Label();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.vSBMin = new System.Windows.Forms.VScrollBar();
-            this.lblRMin = new System.Windows.Forms.Label();
-            this.lblRMax = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,32 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // lblRMax
+            // 
+            this.lblRMax.AutoSize = true;
+            this.lblRMax.Location = new System.Drawing.Point(272, 231);
+            this.lblRMax.Name = "lblRMax";
+            this.lblRMax.Size = new System.Drawing.Size(50, 13);
+            this.lblRMax.TabIndex = 8;
+            this.lblRMax.Text = "DateMax";
+            // 
+            // lblRMin
+            // 
+            this.lblRMin.AutoSize = true;
+            this.lblRMin.Location = new System.Drawing.Point(3, 231);
+            this.lblRMin.Name = "lblRMin";
+            this.lblRMin.Size = new System.Drawing.Size(47, 13);
+            this.lblRMin.TabIndex = 1;
+            this.lblRMin.Text = "DateMin";
+            // 
+            // vSBMin
+            // 
+            this.vSBMin.Location = new System.Drawing.Point(20, 37);
+            this.vSBMin.Name = "vSBMin";
+            this.vSBMin.Size = new System.Drawing.Size(17, 162);
+            this.vSBMin.TabIndex = 7;
+            this.vSBMin.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vSBMin_Scroll);
             // 
             // lblMax
             // 
@@ -113,7 +139,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(357, 323);
+            this.tabPage2.Size = new System.Drawing.Size(403, 323);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -124,32 +150,6 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "1.jpg");
             this.imageList1.Images.SetKeyName(1, "2.jpg");
-            // 
-            // vSBMin
-            // 
-            this.vSBMin.Location = new System.Drawing.Point(20, 37);
-            this.vSBMin.Name = "vSBMin";
-            this.vSBMin.Size = new System.Drawing.Size(17, 162);
-            this.vSBMin.TabIndex = 7;
-            this.vSBMin.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vSBMin_Scroll);
-            // 
-            // lblRMin
-            // 
-            this.lblRMin.AutoSize = true;
-            this.lblRMin.Location = new System.Drawing.Point(3, 231);
-            this.lblRMin.Name = "lblRMin";
-            this.lblRMin.Size = new System.Drawing.Size(47, 13);
-            this.lblRMin.TabIndex = 1;
-            this.lblRMin.Text = "DateMin";
-            // 
-            // lblRMax
-            // 
-            this.lblRMax.AutoSize = true;
-            this.lblRMax.Location = new System.Drawing.Point(272, 231);
-            this.lblRMax.Name = "lblRMax";
-            this.lblRMax.Size = new System.Drawing.Size(50, 13);
-            this.lblRMax.TabIndex = 8;
-            this.lblRMax.Text = "DateMax";
             // 
             // Form1
             // 
