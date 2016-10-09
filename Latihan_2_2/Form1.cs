@@ -34,6 +34,7 @@ namespace Latihan_2_2
             dt = new DateTime(DateTime.Now.Year, vmonth, vdate);
             monthCalender.AddAnnuallyBoldedDate(dt);
             monthCalender.UpdateBoldedDates();
+            monthCalender.SetDate(dt);
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
