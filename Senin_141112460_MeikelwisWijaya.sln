@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latihan_1_1", "Latihan_1_1\Latihan_1_1.csproj", "{A6D08F34-CDC1-45EE-AE98-4E5801E978EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latihan_2_2", "Latihan_2_2\Latihan_2_2.csproj", "{07A5C464-C80C-4190-9D8E-685A7F8407E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A6D08F34-CDC1-45EE-AE98-4E5801E978EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6D08F34-CDC1-45EE-AE98-4E5801E978EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6D08F34-CDC1-45EE-AE98-4E5801E978EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A5C464-C80C-4190-9D8E-685A7F8407E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A5C464-C80C-4190-9D8E-685A7F8407E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A5C464-C80C-4190-9D8E-685A7F8407E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A5C464-C80C-4190-9D8E-685A7F8407E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

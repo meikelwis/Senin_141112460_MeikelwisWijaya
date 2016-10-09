@@ -19,3 +19,12 @@ E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\De
 E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_no_1.Form1.resources
 E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.Properties.Resources.resources
 E:\College\Framework Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.csproj.GenerateResource.Cache
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\bin\Debug\Latihan_1_1.exe.config
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.exe
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.pdb
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\bin\Debug\Latihan_1_1.exe
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\bin\Debug\Latihan_1_1.pdb
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.csprojResolveAssemblyReference.cache
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_no_1.Form1.resources
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.Properties.Resources.resources
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_1_1\obj\Debug\Latihan_1_1.csproj.GenerateResource.Cache

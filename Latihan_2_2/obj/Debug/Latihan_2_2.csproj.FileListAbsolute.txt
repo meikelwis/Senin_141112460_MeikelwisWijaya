@@ -1,0 +1,9 @@
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\bin\Debug\Latihan_2_2.exe.config
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\bin\Debug\Latihan_2_2.exe
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\bin\Debug\Latihan_2_2.pdb
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\obj\Debug\Latihan_2_2.Form1.resources
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\obj\Debug\Latihan_2_2.Properties.Resources.resources
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\obj\Debug\Latihan_2_2.csproj.GenerateResource.Cache
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\obj\Debug\Latihan_2_2.exe
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\obj\Debug\Latihan_2_2.pdb
+Z:\Matkul\Senin_141112460_MeikelwisWijaya\Latihan_2_2\obj\Debug\Latihan_2_2.csprojResolveAssemblyReference.cache
