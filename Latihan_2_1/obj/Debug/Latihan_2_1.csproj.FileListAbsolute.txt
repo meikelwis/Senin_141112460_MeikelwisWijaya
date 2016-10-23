@@ -19,3 +19,9 @@ Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_2_1\obj\Deb
 C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\bin\Debug\Latihan_2_2.exe.config
 C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\obj\Debug\Latihan_2_2.exe
 C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\obj\Debug\Latihan_2_2.pdb
+C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\bin\Debug\Latihan_2_2.exe
+C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\bin\Debug\Latihan_2_2.pdb
+C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\obj\Debug\Latihan_2_1.csprojResolveAssemblyReference.cache
+C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\obj\Debug\Latihan_2_2.Form1.resources
+C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\obj\Debug\Latihan_2_2.Properties.Resources.resources
+C:\Senin_141112460_MeikelwisWijaya\Latihan_2_1\obj\Debug\Latihan_2_1.csproj.GenerateResource.Cache
