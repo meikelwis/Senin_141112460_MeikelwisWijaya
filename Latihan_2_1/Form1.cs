@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Latihan_2_2
 {
-    public partial class Form1 : Form
+    public partial class Form_2_1 : Form
     {
         DateTime dt;
 
-        public Form1()
+        public Form_2_1()
         {
             InitializeComponent();
         }

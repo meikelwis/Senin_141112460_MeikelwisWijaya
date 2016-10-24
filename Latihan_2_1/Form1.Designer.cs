@@ -1,6 +1,6 @@
 ﻿namespace Latihan_2_2
 {
-    partial class Form1
+    partial class Form_2_1
     {
         /// <summary>
         /// Required designer variable.
@@ -105,7 +105,7 @@
             0,
             0});
             // 
-            // Form1
+            // Form_2_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,8 +115,8 @@
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.dupBulan);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Form_2_1";
+            this.Text = "Form_2_1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.nupTanggal)).EndInit();
             this.ResumeLayout(false);

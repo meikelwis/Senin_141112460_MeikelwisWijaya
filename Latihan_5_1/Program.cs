@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Latihan_2_2
+namespace Latihan_5_1
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Latihan_2_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_2_1());
+            Application.Run(new Form_5_1());
         }
     }
 }
