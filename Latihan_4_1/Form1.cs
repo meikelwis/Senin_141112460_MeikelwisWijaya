@@ -38,6 +38,7 @@ namespace Latihan_4_1
                 if (prop.PropertyType.FullName == "System.Drawing.Color")
                 {
                     cbColor.Items.Add(prop.Name);
+                    cbBColor.Items.Add(prop.Name);
                 }
             }
             cbFont.SelectedIndex = 0;
@@ -131,6 +132,11 @@ namespace Latihan_4_1
             rbContainer.SelectionColor = Color.FromName(cbColor.Text);
         }
 
+        private void cbBColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            rbContainer.SelectionBackColor = Color.FromName(cbBColor.Text); //24/10/16 Meikelwis Lupa tambah background Color
+        }
+
         private void saveFile(RichTextBox rb)
         {
             SaveFileDialog sf = new SaveFileDialog();
@@ -209,6 +215,7 @@ namespace Latihan_4_1
                 else if (dr == DialogResult.Cancel) return;
             }
         }
+
 
     }
 }

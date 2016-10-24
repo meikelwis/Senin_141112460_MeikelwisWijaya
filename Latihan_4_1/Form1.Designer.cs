@@ -45,6 +45,8 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblBColor = new System.Windows.Forms.Label();
+            this.cbBColor = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBItalic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBold)).BeginInit();
@@ -58,7 +60,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rbContainer.Location = new System.Drawing.Point(15, 51);
             this.rbContainer.Name = "rbContainer";
-            this.rbContainer.Size = new System.Drawing.Size(528, 290);
+            this.rbContainer.Size = new System.Drawing.Size(687, 290);
             this.rbContainer.TabIndex = 16;
             this.rbContainer.Text = "";
             // 
@@ -155,7 +157,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(554, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(713, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -202,11 +204,31 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // lblBColor
+            // 
+            this.lblBColor.AutoSize = true;
+            this.lblBColor.Location = new System.Drawing.Point(523, 29);
+            this.lblBColor.Name = "lblBColor";
+            this.lblBColor.Size = new System.Drawing.Size(41, 13);
+            this.lblBColor.TabIndex = 22;
+            this.lblBColor.Text = "B.Color";
+            // 
+            // cbBColor
+            // 
+            this.cbBColor.FormattingEnabled = true;
+            this.cbBColor.Location = new System.Drawing.Point(570, 26);
+            this.cbBColor.Name = "cbBColor";
+            this.cbBColor.Size = new System.Drawing.Size(121, 21);
+            this.cbBColor.TabIndex = 21;
+            this.cbBColor.SelectedIndexChanged += new System.EventHandler(this.cbBColor_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 346);
+            this.ClientSize = new System.Drawing.Size(713, 346);
+            this.Controls.Add(this.lblBColor);
+            this.Controls.Add(this.cbBColor);
             this.Controls.Add(this.pbU);
             this.Controls.Add(this.pBItalic);
             this.Controls.Add(this.pbBold);
@@ -251,6 +273,8 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Label lblBColor;
+        private System.Windows.Forms.ComboBox cbBColor;
 
     }
 }
