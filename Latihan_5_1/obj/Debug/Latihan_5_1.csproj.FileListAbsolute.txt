@@ -11,3 +11,10 @@ C:\Senin_141112460_MeikelwisWijaya\Latihan_5_1\obj\Debug\Latihan_5_1.Form_5_1.re
 Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\bin\Debug\Latihan_5_1.exe.config
 Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\obj\Debug\Latihan_5_1.exe
 Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\obj\Debug\Latihan_5_1.pdb
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\bin\Debug\Latihan_5_1.exe
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\bin\Debug\Latihan_5_1.pdb
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\obj\Debug\Latihan_5_1.csprojResolveAssemblyReference.cache
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\obj\Debug\Latihan_5_1.Form_5_1_a.resources
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\obj\Debug\Latihan_5_1.Form_5_1.resources
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\obj\Debug\Latihan_5_1.Properties.Resources.resources
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\Latihan_5_1\obj\Debug\Latihan_5_1.csproj.GenerateResource.Cache

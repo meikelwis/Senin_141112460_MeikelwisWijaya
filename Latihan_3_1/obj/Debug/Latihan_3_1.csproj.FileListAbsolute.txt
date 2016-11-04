@@ -6,4 +6,3 @@ C:\Senin_141112460_MeikelwisWijaya\Latihan_3_1\obj\Debug\Latihan_3_1.Properties.
 C:\Senin_141112460_MeikelwisWijaya\Latihan_3_1\obj\Debug\Latihan_3_1.csproj.GenerateResource.Cache
 C:\Senin_141112460_MeikelwisWijaya\Latihan_3_1\obj\Debug\Latihan_3_1.exe
 C:\Senin_141112460_MeikelwisWijaya\Latihan_3_1\obj\Debug\Latihan_3_1.pdb
-C:\Senin_141112460_MeikelwisWijaya\Latihan_3_1\obj\Debug\Latihan_3_1.csprojResolveAssemblyReference.cache

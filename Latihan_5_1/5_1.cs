@@ -12,12 +12,12 @@ namespace Latihan_5_1
 {
     public partial class Form_5_1 : Form
     {
-
         Font vfont = new Font("Times New Rowman", 12, FontStyle.Regular);
         string family = "";
         int size = 0;
         FontStyle fs = FontStyle.Regular;
 
+        
         public Form_5_1()
         {
             InitializeComponent(); 
@@ -74,25 +74,32 @@ namespace Latihan_5_1
                 {
                     rb.SelectionStart = i;
                     rb.SelectionLength = 1;
-                    switch (type)
+                    try
                     {
-                        case 1:
-                            setFamily(rb, vfont);
-                            break;
-                        case 2:
-                            setSize(rb, vsize);
-                            break;
-                        case 3:
-                            setStyle(rb, FontStyle.Bold);
-                            break;
-                        case 4:
-                            setStyle(rb, FontStyle.Italic);
-                            break;
-                        case 5:
-                            setStyle(rb, FontStyle.Underline);
-                            break;
-                        default:
-                            break;
+                        switch (type)
+                        {
+                            case 1:
+                                setFamily(rb, vfont);
+                                break;
+                            case 2:
+                                setSize(rb, vsize);
+                                break;
+                            case 3:
+                                setStyle(rb, FontStyle.Bold);
+                                break;
+                            case 4:
+                                setStyle(rb, FontStyle.Italic);
+                                break;
+                            case 5:
+                                setStyle(rb, FontStyle.Underline);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    catch
+                    {
+                        return;
                     }
                 }
             }
@@ -218,48 +225,81 @@ namespace Latihan_5_1
         {
             if(e.Button==System.Windows.Forms.MouseButtons.Right)
             {
-                ContextMenu cm = new System.Windows.Forms.ContextMenu();
-                MenuItem menuItem = new MenuItem("Cut");
-                menuItem.Shortcut = Shortcut.CtrlX;
-                menuItem.Click += new EventHandler(CutAction);
-                cm.MenuItems.Add(menuItem);
-                menuItem = new MenuItem("Copy");
-                menuItem.Shortcut = Shortcut.CtrlC;
-                menuItem.Click += new EventHandler(CopyAction);
-                cm.MenuItems.Add(menuItem);
-                menuItem = new MenuItem("Paste");
-                menuItem.Shortcut = Shortcut.CtrlV;
-                menuItem.Click += new EventHandler(PasteAction);
-                cm.MenuItems.Add(menuItem);
-                menuItem = new MenuItem("Delete");
-                menuItem.Shortcut = Shortcut.Del;
-                menuItem.Click += new EventHandler(DeleteAction);
-                cm.MenuItems.Add(menuItem);
-
-                rbContainer.ContextMenu = cm;
+                cm.Show(this, e.X, e.Y);
             }
         }
-        void CutAction(object sender, EventArgs e)
-        {
-            rbContainer.Cut();
-        }
-        void CopyAction(object sender, EventArgs e)
-        {
-            rbContainer.Copy();
-        }
-        void PasteAction(object sender, EventArgs e)
-        {
-            rbContainer.Paste();
-        }
-        void DeleteAction(object sender, EventArgs e)
-        {
-            rbContainer.Clear();
-        }
-
+        
         private void editorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var setting = new Form_5_1_a();
+            Form_5_1_a setting = new Form_5_1_a();
+            setting.MdiParent = this;
+            rbContainer.SendToBack();
             setting.Show();
         }
+        private RichTextBox vrbContainer;
+        //Meikelwis 4/11/2016 Tambah Untuk Cut, Copy, Paste, Delete
+        public RichTextBox VrbContainer
+        {
+            get { return rbContainer; }
+            set { vrbContainer = rbContainer; }
+        }
+
+        public void showMain()
+        {
+            VrbContainer.Show();
+            VrbContainer.BringToFront();
+
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(rbContainer.SelectedRtf, TextDataFormat.Rtf);
+            rbContainer.SelectedRtf = "";
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(rbContainer.SelectedRtf, TextDataFormat.Rtf);
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rbContainer.SelectedRtf = Clipboard.GetText(TextDataFormat.Rtf);
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rbContainer.SelectedRtf = "";
+        }
+        private void cm_Opening(object sender, CancelEventArgs e)
+        {
+            if (!Clipboard.ContainsText(TextDataFormat.Rtf)) pasteToolStripMenuItem.Enabled = false;
+            else pasteToolStripMenuItem.Enabled = true;
+
+            if (rbContainer.SelectedText.Length <= 0)
+            {
+                copyToolStripMenuItem.Enabled = false;
+                cutToolStripMenuItem.Enabled = false;
+                deleteToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                copyToolStripMenuItem.Enabled = true;
+                cutToolStripMenuItem.Enabled = true;
+                deleteToolStripMenuItem.Enabled = true;
+            }
+        }
+
+        private void Form_5_1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you want to save these files ?", "Important Question", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rbContainer.Text != null)
+            {
+                if (dr == DialogResult.Yes) saveFile(rbContainer);
+                else if (dr == DialogResult.No) Application.Exit();
+                else if (dr == DialogResult.Cancel) return;
+            }
+        }
+
     }
 }
