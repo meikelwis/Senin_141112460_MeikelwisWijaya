@@ -1,0 +1,8 @@
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\volleyball_problem\bin\Debug\volleyball_problem.exe.config
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\volleyball_problem\obj\Debug\volleyball_problem.Form1.resources
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\volleyball_problem\obj\Debug\volleyball_problem.Properties.Resources.resources
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\volleyball_problem\obj\Debug\volleyball_problem.csproj.GenerateResource.Cache
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\volleyball_problem\bin\Debug\volleyball_problem.exe
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\volleyball_problem\bin\Debug\volleyball_problem.pdb
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\volleyball_problem\obj\Debug\volleyball_problem.exe
+Z:\Matkul\Framework_Lanjutan\Senin_141112460_MeikelwisWijaya\volleyball_problem\obj\Debug\volleyball_problem.pdb
