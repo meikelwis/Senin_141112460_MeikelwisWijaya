@@ -12,20 +12,18 @@ using MySql.Data.MySqlClient;
 
 namespace Latihan_POS
 {
-    public partial class frmMain : Form
+    public partial class frmMain : MetroFramework.Forms.MetroForm
     {
+        
 
-
-
+        
         public frmMain()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
             
         }
+
+       
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -54,19 +52,24 @@ namespace Latihan_POS
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
         {
             txtKode.Text = "";
             txtNama.Text = "";
             txtJmlh_Awal.Text = "";
             txtHarga_HPP.Text = "";
             txtHarga_Jual.Text = "";
+            txtKode.Focus();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
 
 
