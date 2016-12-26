@@ -38,8 +38,16 @@ namespace Latihan_POS
         {
             if (CheckConnection() == true)
             {
-                MySqlDataAdapter da = new MySqlDataAdapter(sQuery, DBConnection.GetDBConnection());
-                da.Fill(ds, vTable);
+                if (vTable == "MSTBARANG")
+                {
+                    MySqlDataAdapter da = new MySqlDataAdapter(sQuery, DBConnection.GetDBConnection());
+                    da.Fill(ds, "MSTBARANG");
+                }
+                if (vTable == "MSTCUSTOMER")
+                {
+                    MySqlDataAdapter da = new MySqlDataAdapter(sQuery, DBConnection.GetDBConnection());
+                    da.Fill(ds, "MSTCUSTOMER");
+                }
             }
         }
     }

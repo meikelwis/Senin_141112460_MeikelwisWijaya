@@ -8,7 +8,6 @@ namespace Latihan_POS
 {
     class Master
     {
-
         public string Kode { get; set; }
         public string Nama { get; set; }
         public DateTime CreatedDt { get; set; }
@@ -21,6 +20,8 @@ namespace Latihan_POS
             UpdatedDt = updatedDt;
         }
     }
+
+    //class untuk barang
     class Barang : Master
     {
         MySqlConnection conDb = DBConnection.GetDBConnection();
@@ -41,7 +42,7 @@ namespace Latihan_POS
         {
             daBarang.SelectCommand = new MySqlCommand("SELECT KODE,NAMA,JUMLAH_AWAL,HARGA_HPP,HARGA_JUAL FROM POS.MSTBARANG;", conDb);
 
-            daBarang.UpdateCommand = new MySqlCommand("UPDATE POS.MSTBARANG SET KODE = @KODE, NAMA = @NAMA, JUMLAH_AWAL = @JUMLAH_AWAL, HARGA_HPP = @HARGA_HPP,HARGA_JUAL = @HARGA_JUAL,UPDATE_DT = @UPDATE_DT", conDb);
+            daBarang.UpdateCommand = new MySqlCommand("UPDATE POS.MSTBARANG SET KODE = @KODE, NAMA = @NAMA, JUMLAH_AWAL = @JUMLAH_AWAL, HARGA_HPP = @HARGA_HPP,HARGA_JUAL = @HARGA_JUAL,UPDATED_DT = @UPDATED_DT WHERE KODE = @KODE", conDb);
 
             daBarang.InsertCommand = new MySqlCommand("INSERT INTO POS.MSTBARANG (KODE,NAMA,JUMLAH_AWAL,HARGA_HPP,HARGA_JUAL,CREATED_DT) VALUES (@KODE,@NAMA,@JUMLAH_AWAL,@HARGA_HPP,@HARGA_JUAL,@CREATED_DT);", conDb);
 
@@ -61,7 +62,7 @@ namespace Latihan_POS
             daBarang.UpdateCommand.Parameters.AddWithValue("@JUMLAH_AWAL", JlhAwal);
             daBarang.UpdateCommand.Parameters.AddWithValue("@HARGA_HPP", HargaHpp);
             daBarang.UpdateCommand.Parameters.AddWithValue("@HARGA_JUAL", HargaJual);
-            daBarang.UpdateCommand.Parameters.AddWithValue("@UPDATE_DT", UpdatedDt);
+            daBarang.UpdateCommand.Parameters.AddWithValue("@UPDATED_DT", UpdatedDt);
 
             //UNTUK DELETE DATA
             daBarang.DeleteCommand.Parameters.AddWithValue("@KODE", Kode);
@@ -80,6 +81,91 @@ namespace Latihan_POS
             daBarang.InsertCommand.ExecuteNonQuery();
             conDb.Close();
         }
-        
+        public void UpdateData()
+        {
+            conDb.Open();
+            InitializeData();
+            daBarang.UpdateCommand.ExecuteNonQuery();
+            conDb.Close();
+        }
+        public void DeleteData()
+        {
+            conDb.Open();
+            InitializeData();
+            daBarang.DeleteCommand.ExecuteNonQuery();
+            conDb.Close();
+        }
+    }
+
+    //class untuk customer
+    class Customer : Master
+    {
+        MySqlConnection conDb = DBConnection.GetDBConnection();
+        MySqlDataAdapter daCustomer = new MySqlDataAdapter();
+
+        public string Alamat { set; get; }
+        public int Handphone { set; get; }
+        public Customer(string kode, string nama, string alamat, int handphone,DateTime createdDt, DateTime updatedDt)
+            : base(kode, nama, createdDt, updatedDt)
+        {
+            this.Alamat = alamat;
+            this.Handphone = handphone;
+        }
+        private void InitializeData()
+        {
+            daCustomer.SelectCommand = new MySqlCommand("SELECT KODE,NAMA,ALAMAT,HANDPHONE FROM POS.MSTCUSTOMER;", conDb);
+
+            daCustomer.UpdateCommand = new MySqlCommand("UPDATE POS.MSTCUSTOMER SET KODE = @KODE, NAMA = @NAMA, ALAMAT = @ALAMAT, HANDPHONE=@HANDPHONE,UPDATED_DT = @UPDATED_DT WHERE KODE = @KODE", conDb);
+
+            daCustomer.InsertCommand = new MySqlCommand("INSERT INTO POS.MSTCUSTOMER (KODE,NAMA,ALAMAT,HANDPHONE,CREATED_DT) VALUES (@KODE,@NAMA,@ALAMAT,@HANDPHONE,@CREATED_DT);", conDb);
+
+            daCustomer.DeleteCommand = new MySqlCommand("DELETE FROM POS.MSTCUSTOMER WHERE KODE = @KODE;", conDb);
+
+            //UNTUK INSERT DATA
+            daCustomer.InsertCommand.Parameters.AddWithValue("@KODE", Kode);
+            daCustomer.InsertCommand.Parameters.AddWithValue("@NAMA", Nama);
+            daCustomer.InsertCommand.Parameters.AddWithValue("@ALAMAT", Alamat);
+            daCustomer.InsertCommand.Parameters.AddWithValue("@HANDPHONE", Handphone);
+            daCustomer.InsertCommand.Parameters.AddWithValue("@CREATED_DT", CreatedDt);
+
+            //UNTUK UPDATE DATA
+            daCustomer.UpdateCommand.Parameters.AddWithValue("@KODE", Kode);
+            daCustomer.UpdateCommand.Parameters.AddWithValue("@NAMA", Nama);
+            daCustomer.UpdateCommand.Parameters.AddWithValue("@ALAMAT", Alamat);
+            daCustomer.UpdateCommand.Parameters.AddWithValue("@HANDPHONE", Handphone);
+            daCustomer.UpdateCommand.Parameters.AddWithValue("@UPDATED_DT", UpdatedDt);
+
+            //UNTUK DELETE DATA
+            daCustomer.DeleteCommand.Parameters.AddWithValue("@KODE", Kode);
+        }
+        public void ViewData()
+        {
+            conDb.Open();
+            InitializeData();
+            daCustomer.SelectCommand.ExecuteReader();
+            conDb.Close();
+        }
+        public void InsertData()
+        {
+            conDb.Open();
+            InitializeData();
+            daCustomer.InsertCommand.ExecuteNonQuery();
+            conDb.Close();
+        }
+        public void UpdateData()
+        {
+            conDb.Open();
+            InitializeData();
+            daCustomer.UpdateCommand.ExecuteNonQuery();
+            conDb.Close();
+        }
+        public void DeleteData()
+        {
+            conDb.Open();
+            InitializeData();
+            daCustomer.DeleteCommand.ExecuteNonQuery();
+            conDb.Close();
+        }
+
     }
 }
