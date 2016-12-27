@@ -21,11 +21,13 @@ namespace Latihan_POS
         DateTime ut = DateTime.Now;
         bool isUpdate = false;
         bool isDelete = false;
-        bool isInsert = true;
+        bool isInsert = false;
         public frmMain()
         {
             InitializeComponent();
             InitializeData();
+            mtbRegis.BringToFront();
+            mtbRegis.SelectedTab = tbBarang;
         }
         private void InitializeData()
         {
@@ -76,11 +78,31 @@ namespace Latihan_POS
             dgvCustomer.Columns[1].HeaderText = "Nama Customer";
             dgvCustomer.Columns[2].HeaderText = "Alamat Customer";
             dgvCustomer.Columns[3].HeaderText = "Handphone";
+            //-------------------------------------------------------------------------
+            //Initialisasi data supplier
+            DataSet dsSupplier = new DataSet();
+            db.ViewDataSet("SELECT KODE,NAMA,ALAMAT,HANDPHONE FROM MSTSUPPLIER", "MSTSUPPLIER", dsSupplier);
+
+            DataTable dtSupplier = new DataTable();
+            BindingSource bsSupplier = new BindingSource();
+            bsSupplier.DataSource = dtSupplier;
+            dgvSupplier.DataSource = bsSupplier;
+            dgvSupplier.ReadOnly = true;
+            dgvSupplier.MultiSelect = false;
+            dgvSupplier.AllowUserToAddRows = false;
+            dgvSupplier.AllowUserToDeleteRows = false;
+            dgvSupplier.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvSupplier.DataSource = dsSupplier.Tables["MSTSUPPLIER"];
+            //Tuk ganti judul header kolom
+            dgvSupplier.Columns[0].HeaderText = "Kode Supplier";
+            dgvSupplier.Columns[1].HeaderText = "Nama Supplier";
+            dgvSupplier.Columns[2].HeaderText = "Alamat Supplier";
+            dgvSupplier.Columns[3].HeaderText = "Handphone";
 
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -89,11 +111,20 @@ namespace Latihan_POS
             isUpdate = false;
             isDelete = false;
             ClearData();
+            if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbBarang"]) BarangKode.Focus();
+            if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbCustomer"]) CustomerKode.Focus();
+            if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbSupplier"]) SupplierKode.Focus();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             ProcessData();
             ClearData();
+            isInsert = false;
+            isUpdate = false;
+            isDelete = false;
+            if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbBarang"]) BarangKode.Focus();
+            if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbCustomer"]) CustomerKode.Focus();
+            if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbSupplier"]) SupplierKode.Focus();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -120,8 +151,8 @@ namespace Latihan_POS
                 BarangJmlhAwal.Clear();
                 BarangHargaHPP.Clear();
                 BarangHargaJual.Clear();
+                BarangKode.Focus();
                 BarangKode.Enabled = true;
-                BarangNama.Focus();
             }
             //Hapus Data untukCustomer
             //--------------------------------------------
@@ -131,8 +162,20 @@ namespace Latihan_POS
                 CustomerNama.Clear();
                 CustomerAlamat.Clear();
                 CustomerHp.Clear();
-                CustomerKode.Enabled = true;
                 CustomerNama.Focus();
+                CustomerKode.Enabled = true;
+            }
+            //Hapus Data untukSupplier
+            //--------------------------------------------
+
+            if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbSupplier"])
+            {
+                SupplierKode.Clear();
+                SupplierNama.Clear();
+                SupplierAlamat.Clear();
+                SupplierHp.Clear();
+                SupplierKode.Focus();
+                SupplierKode.Enabled = true;
             }
         }
         private void dgvBarang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -157,6 +200,19 @@ namespace Latihan_POS
             CustomerAlamat.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
             CustomerHp.Text = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
             CustomerKode.Enabled = false;
+            isUpdate = true;
+            isInsert = false;
+            isDelete = false;
+        }
+
+        private void dgvSupplier_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //untukSupplier
+            SupplierKode.Text = dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
+            SupplierNama.Text = dgvSupplier.Rows[e.RowIndex].Cells[1].Value.ToString();
+            SupplierAlamat.Text = dgvSupplier.Rows[e.RowIndex].Cells[2].Value.ToString();
+            SupplierHp.Text = dgvSupplier.Rows[e.RowIndex].Cells[3].Value.ToString();
+            SupplierKode.Enabled = false;
             isUpdate = true;
             isInsert = false;
             isDelete = false;
@@ -188,24 +244,42 @@ namespace Latihan_POS
                 else if (CustomerHp.Text == "")
                     return false;
             }
+            if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbSupplier"])
+            {
+                if (SupplierKode.Text == "")
+                    return false;
+                else if (SupplierNama.Text == "")
+                    return false;
+                else if (SupplierAlamat.Text == "")
+                    return false;
+                else if (SupplierHp.Text == "")
+                    return false;
+            }
             return true;
         }
         //Method untuk simpan Data
         private void ProcessData()
         {
-            if (isValid() == false) MessageBox.Show("Please Check Your Data and Choose Data if you want to edit or delete data");
+            if (isValid() == false) MessageBox.Show("Please Check Your Data or Choose Data if you want to edit or delete data"+
+                "(Mohon Untuk Mengecek Data atau Silakan Pilih Data jika ingin mengedit atau menghapus data)");
             if (isValid() == true)
             {
+                if (isInsert == false && isUpdate == false && isDelete == false)
+                {
+                    MessageBox.Show("Please Click New Add Transactions"+
+                        "Silakan Klik Tombol New Untuk Menambah Transaksi");
+                    return;
+                }
                 if (MessageBox.Show("Are You want to save to save these transactions?",
                 "Questions", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //untuk validasi barang
                     if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbBarang"])
                     {
-                        Barang mstBarang = new Barang(BarangKode.Text, BarangNama.Text, int.Parse(BarangJmlhAwal.Text), double.Parse(BarangHargaJual.Text), double.Parse(BarangHargaJual.Text), dt, dt);
-                        string msg;
                         try
                         {
+                            Barang mstBarang = new Barang(BarangKode.Text, BarangNama.Text, int.Parse(BarangJmlhAwal.Text), double.Parse(BarangHargaJual.Text), double.Parse(BarangHargaJual.Text), dt, dt);
+                            string msg;
                             if (isInsert == true)
                             {
                                 mstBarang.InsertData();
@@ -235,10 +309,10 @@ namespace Latihan_POS
                     //untuk validasi customer
                     if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbCustomer"])
                     {
-                        Customer mstCustomer = new Customer(CustomerKode.Text, CustomerNama.Text, CustomerAlamat.Text, int.Parse(CustomerHp.Text), dt, dt);
-                        string msg;
                         try
                         {
+                            Customer mstCustomer = new Customer(CustomerKode.Text, CustomerNama.Text, CustomerAlamat.Text, int.Parse(CustomerHp.Text), dt, dt);
+                            string msg;
                             if (isInsert == true)
                             {
                                 mstCustomer.InsertData();
@@ -265,9 +339,52 @@ namespace Latihan_POS
                             MessageBox.Show(ex.Message);
                         }
                     }
+                    if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbSupplier"])
+                    {
+                        try
+                        {
+                            Supplier mstSupplier = new Supplier(SupplierKode.Text, SupplierNama.Text, SupplierAlamat.Text, int.Parse(SupplierHp.Text), dt, dt);
+                            string msg;
+                            if (isInsert == true)
+                            {
+                                mstSupplier.InsertData();
+                                msg = "Record have been saved";
+                                MessageBox.Show(msg, "Information");
+                            }
+                            if (isUpdate == true)
+                            {
+                                mstSupplier.UpdateData();
+                                msg = "Record have been updated";
+                                MessageBox.Show(msg, "Information");
+                            }
+                            if (isDelete == true)
+                            {
+                                mstSupplier.DeleteData();
+                                msg = "Record have been deleted";
+                                MessageBox.Show(msg, "Information");
+                            }
+                            InitializeData();
+                            return;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
                 }
             }
         }
+
+        private void btnRegis_Click(object sender, EventArgs e)
+        {
+            mtbRegis.BringToFront();
+        }
+
+        private void btnTrans_Click(object sender, EventArgs e)
+        {
+            mtbTransc.BringToFront();
+        }
+
 
 
     }

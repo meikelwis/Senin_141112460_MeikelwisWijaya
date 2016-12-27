@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 namespace Latihan_POS
 {
+    //Base Class Master
+    //------------------------------------------------------
+    #region Master
     class Master
     {
         public string Kode { get; set; }
@@ -20,8 +23,12 @@ namespace Latihan_POS
             UpdatedDt = updatedDt;
         }
     }
+    #endregion Master
 
-    //class untuk barang
+    //menggunakan region untuk pemisahan masing2 class
+    //class untuk barang diturunkan dari master
+    //------------------------------------------------------
+    #region Barang
     class Barang : Master
     {
         MySqlConnection conDb = DBConnection.GetDBConnection();
@@ -96,8 +103,10 @@ namespace Latihan_POS
             conDb.Close();
         }
     }
-
-    //class untuk customer
+    #endregion Barang
+    //class untuk customer diturunkan dari master
+    //------------------------------------------------------
+    #region Customer
     class Customer : Master
     {
         MySqlConnection conDb = DBConnection.GetDBConnection();
@@ -166,6 +175,79 @@ namespace Latihan_POS
             daCustomer.DeleteCommand.ExecuteNonQuery();
             conDb.Close();
         }
+    }
+    #endregion Customer
+    //class untuk supplier diturunkan dari master
+    //------------------------------------------------------
+    #region Supplier
+    class Supplier : Master
+    {
+        MySqlConnection conDb = DBConnection.GetDBConnection();
+        MySqlDataAdapter daSupplier = new MySqlDataAdapter();
 
+        public string Alamat { set; get; }
+        public int Handphone { set; get; }
+        public Supplier(string kode, string nama, string alamat, int handphone,DateTime createdDt, DateTime updatedDt)
+            : base(kode, nama, createdDt, updatedDt)
+        {
+            this.Alamat = alamat;
+            this.Handphone = handphone;
+        }
+        private void InitializeData()
+        {
+            daSupplier.SelectCommand = new MySqlCommand("SELECT KODE,NAMA,ALAMAT,HANDPHONE FROM POS.MSTSUPPLIER;", conDb);
+
+            daSupplier.UpdateCommand = new MySqlCommand("UPDATE POS.MSTSUPPLIER SET KODE = @KODE, NAMA = @NAMA, ALAMAT = @ALAMAT, HANDPHONE=@HANDPHONE,UPDATED_DT = @UPDATED_DT WHERE KODE = @KODE", conDb);
+
+            daSupplier.InsertCommand = new MySqlCommand("INSERT INTO POS.MSTSUPPLIER (KODE,NAMA,ALAMAT,HANDPHONE,CREATED_DT) VALUES (@KODE,@NAMA,@ALAMAT,@HANDPHONE,@CREATED_DT);", conDb);
+
+            daSupplier.DeleteCommand = new MySqlCommand("DELETE FROM POS.MSTSUPPLIER WHERE KODE = @KODE;", conDb);
+
+            //UNTUK INSERT DATA
+            daSupplier.InsertCommand.Parameters.AddWithValue("@KODE", Kode);
+            daSupplier.InsertCommand.Parameters.AddWithValue("@NAMA", Nama);
+            daSupplier.InsertCommand.Parameters.AddWithValue("@ALAMAT", Alamat);
+            daSupplier.InsertCommand.Parameters.AddWithValue("@HANDPHONE", Handphone);
+            daSupplier.InsertCommand.Parameters.AddWithValue("@CREATED_DT", CreatedDt);
+
+            //UNTUK UPDATE DATA
+            daSupplier.UpdateCommand.Parameters.AddWithValue("@KODE", Kode);
+            daSupplier.UpdateCommand.Parameters.AddWithValue("@NAMA", Nama);
+            daSupplier.UpdateCommand.Parameters.AddWithValue("@ALAMAT", Alamat);
+            daSupplier.UpdateCommand.Parameters.AddWithValue("@HANDPHONE", Handphone);
+            daSupplier.UpdateCommand.Parameters.AddWithValue("@UPDATED_DT", UpdatedDt);
+
+            //UNTUK DELETE DATA
+            daSupplier.DeleteCommand.Parameters.AddWithValue("@KODE", Kode);
+        }
+        public void ViewData()
+        {
+            conDb.Open();
+            InitializeData();
+            daSupplier.SelectCommand.ExecuteReader();
+            conDb.Close();
+        }
+        public void InsertData()
+        {
+            conDb.Open();
+            InitializeData();
+            daSupplier.InsertCommand.ExecuteNonQuery();
+            conDb.Close();
+        }
+        public void UpdateData()
+        {
+            conDb.Open();
+            InitializeData();
+            daSupplier.UpdateCommand.ExecuteNonQuery();
+            conDb.Close();
+        }
+        public void DeleteData()
+        {
+            conDb.Open();
+            InitializeData();
+            daSupplier.DeleteCommand.ExecuteNonQuery();
+            conDb.Close();
+        }
+    #endregion Supplier
     }
 }

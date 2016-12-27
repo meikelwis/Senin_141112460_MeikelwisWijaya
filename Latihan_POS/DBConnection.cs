@@ -48,6 +48,11 @@ namespace Latihan_POS
                     MySqlDataAdapter da = new MySqlDataAdapter(sQuery, DBConnection.GetDBConnection());
                     da.Fill(ds, "MSTCUSTOMER");
                 }
+                if (vTable == "MSTSUPPLIER")
+                {
+                    MySqlDataAdapter da = new MySqlDataAdapter(sQuery, DBConnection.GetDBConnection());
+                    da.Fill(ds, "MSTSUPPLIER");
+                }
             }
         }
     }
