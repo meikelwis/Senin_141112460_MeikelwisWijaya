@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.msManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.btnTrans = new MetroFramework.Controls.MetroTile();
             this.btnRegis = new MetroFramework.Controls.MetroTile();
@@ -81,17 +85,13 @@
             this.btnDelete = new MetroFramework.Controls.MetroTile();
             this.gbNav = new System.Windows.Forms.GroupBox();
             this.mtbTransc = new MetroFramework.Controls.MetroTabControl();
-            this.mtbPenjualan = new MetroFramework.Controls.MetroTabPage();
-            this.JualAlamat = new System.Windows.Forms.TextBox();
+            this.tbPenjualan = new MetroFramework.Controls.MetroTabPage();
+            this.JualCustomerAlamat = new System.Windows.Forms.TextBox();
             this.lblJualAlamat = new MetroFramework.Controls.MetroLabel();
-            this.JualCustomer = new System.Windows.Forms.TextBox();
+            this.JualCustomerNama = new System.Windows.Forms.TextBox();
             this.lblJualCustomer = new MetroFramework.Controls.MetroLabel();
-            this.JualNama = new System.Windows.Forms.TextBox();
-            this.JualKode = new System.Windows.Forms.TextBox();
-            this.lblJualTanggal = new MetroFramework.Controls.MetroLabel();
-            this.lblJualNoBatch = new MetroFramework.Controls.MetroLabel();
-            this.dgvDetailJual = new System.Windows.Forms.DataGridView();
-            this.mtbPembelian = new MetroFramework.Controls.MetroTabPage();
+            this.dgvDetail = new System.Windows.Forms.DataGridView();
+            this.tbPembelian = new MetroFramework.Controls.MetroTabPage();
             this.NamaSupplier = new System.Windows.Forms.TextBox();
             this.lblBeliNamaSupplier = new MetroFramework.Controls.MetroLabel();
             this.BeliSupplier = new System.Windows.Forms.TextBox();
@@ -101,6 +101,23 @@
             this.lblBeliTanggal = new MetroFramework.Controls.MetroLabel();
             this.lblBeliNoBatch = new MetroFramework.Controls.MetroLabel();
             this.dgvDetailBeli = new System.Windows.Forms.DataGridView();
+            this.JualCustomerKode = new System.Windows.Forms.TextBox();
+            this.lblKodeCustomer = new MetroFramework.Controls.MetroLabel();
+            this.customerBrowse = new MetroFramework.Controls.MetroTile();
+            this.dgvBrowseCustomer = new System.Windows.Forms.DataGridView();
+            this.JualCustomerHp = new System.Windows.Forms.TextBox();
+            this.lblJualHp = new MetroFramework.Controls.MetroLabel();
+            this.dgvBrowseBarang = new System.Windows.Forms.DataGridView();
+            this.JualBarangKode = new System.Windows.Forms.TextBox();
+            this.barangBrowse = new MetroFramework.Controls.MetroTile();
+            this.JualBarangNama = new System.Windows.Forms.TextBox();
+            this.JualBarangHarga = new System.Windows.Forms.TextBox();
+            this.JualBarangQty = new System.Windows.Forms.TextBox();
+            this.btnAdd = new MetroFramework.Controls.MetroTile();
+            this.lblInputKodeBarang = new MetroFramework.Controls.MetroLabel();
+            this.lblInputNamaBarang = new MetroFramework.Controls.MetroLabel();
+            this.lblInputJualBarang = new MetroFramework.Controls.MetroLabel();
+            this.lblInputQtyBarang = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.msManager)).BeginInit();
             this.mtbRegis.SuspendLayout();
             this.tbBarang.SuspendLayout();
@@ -111,10 +128,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.gbNav.SuspendLayout();
             this.mtbTransc.SuspendLayout();
-            this.mtbPenjualan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetailJual)).BeginInit();
-            this.mtbPembelian.SuspendLayout();
+            this.tbPenjualan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
+            this.tbPembelian.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetailBeli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBrowseCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBrowseBarang)).BeginInit();
             this.SuspendLayout();
             // 
             // msManager
@@ -153,7 +172,7 @@
             this.mtbRegis.Location = new System.Drawing.Point(18, 24);
             this.mtbRegis.Name = "mtbRegis";
             this.mtbRegis.SelectedIndex = 0;
-            this.mtbRegis.Size = new System.Drawing.Size(694, 321);
+            this.mtbRegis.Size = new System.Drawing.Size(990, 321);
             this.mtbRegis.TabIndex = 19;
             // 
             // tbBarang
@@ -174,7 +193,7 @@
             this.tbBarang.HorizontalScrollbarSize = 20;
             this.tbBarang.Location = new System.Drawing.Point(4, 35);
             this.tbBarang.Name = "tbBarang";
-            this.tbBarang.Size = new System.Drawing.Size(686, 282);
+            this.tbBarang.Size = new System.Drawing.Size(982, 282);
             this.tbBarang.TabIndex = 0;
             this.tbBarang.Text = "BARANG";
             this.tbBarang.VerticalScrollbarBarColor = true;
@@ -187,23 +206,23 @@
             this.dgvBarang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBarang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvBarang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBarang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBarang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvBarang.ColumnHeadersHeight = 22;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBarang.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBarang.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvBarang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvBarang.GridColor = System.Drawing.SystemColors.Window;
             this.dgvBarang.Location = new System.Drawing.Point(0, 175);
@@ -211,7 +230,7 @@
             this.dgvBarang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvBarang.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBarang.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvBarang.Size = new System.Drawing.Size(686, 107);
+            this.dgvBarang.Size = new System.Drawing.Size(982, 107);
             this.dgvBarang.TabIndex = 62;
             this.dgvBarang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarang_CellClick);
             // 
@@ -339,23 +358,23 @@
             this.dgvCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCustomer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvCustomer.ColumnHeadersHeight = 22;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCustomer.GridColor = System.Drawing.SystemColors.Window;
             this.dgvCustomer.Location = new System.Drawing.Point(0, 175);
@@ -472,23 +491,23 @@
             this.dgvSupplier.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSupplier.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvSupplier.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvSupplier.ColumnHeadersHeight = 22;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSupplier.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSupplier.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvSupplier.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSupplier.GridColor = System.Drawing.SystemColors.Window;
             this.dgvSupplier.Location = new System.Drawing.Point(0, 175);
@@ -638,170 +657,142 @@
             this.gbNav.Location = new System.Drawing.Point(122, 93);
             this.gbNav.Name = "gbNav";
             this.gbNav.Padding = new System.Windows.Forms.Padding(3, 5, 5, 3);
-            this.gbNav.Size = new System.Drawing.Size(720, 421);
+            this.gbNav.Size = new System.Drawing.Size(1016, 421);
             this.gbNav.TabIndex = 22;
             this.gbNav.TabStop = false;
             // 
             // mtbTransc
             // 
-            this.mtbTransc.Controls.Add(this.mtbPenjualan);
-            this.mtbTransc.Controls.Add(this.mtbPembelian);
-            this.mtbTransc.Location = new System.Drawing.Point(19, 24);
+            this.mtbTransc.Controls.Add(this.tbPenjualan);
+            this.mtbTransc.Controls.Add(this.tbPembelian);
+            this.mtbTransc.Location = new System.Drawing.Point(18, 24);
             this.mtbTransc.Name = "mtbTransc";
             this.mtbTransc.SelectedIndex = 0;
-            this.mtbTransc.Size = new System.Drawing.Size(693, 321);
+            this.mtbTransc.Size = new System.Drawing.Size(982, 321);
             this.mtbTransc.TabIndex = 28;
             // 
-            // mtbPenjualan
+            // tbPenjualan
             // 
-            this.mtbPenjualan.Controls.Add(this.JualAlamat);
-            this.mtbPenjualan.Controls.Add(this.lblJualAlamat);
-            this.mtbPenjualan.Controls.Add(this.JualCustomer);
-            this.mtbPenjualan.Controls.Add(this.lblJualCustomer);
-            this.mtbPenjualan.Controls.Add(this.JualNama);
-            this.mtbPenjualan.Controls.Add(this.JualKode);
-            this.mtbPenjualan.Controls.Add(this.lblJualTanggal);
-            this.mtbPenjualan.Controls.Add(this.lblJualNoBatch);
-            this.mtbPenjualan.Controls.Add(this.dgvDetailJual);
-            this.mtbPenjualan.HorizontalScrollbarBarColor = true;
-            this.mtbPenjualan.Location = new System.Drawing.Point(4, 35);
-            this.mtbPenjualan.Name = "mtbPenjualan";
-            this.mtbPenjualan.Size = new System.Drawing.Size(685, 282);
-            this.mtbPenjualan.TabIndex = 1;
-            this.mtbPenjualan.Text = "PENJUALAN";
-            this.mtbPenjualan.VerticalScrollbarBarColor = true;
+            this.tbPenjualan.Controls.Add(this.btnAdd);
+            this.tbPenjualan.Controls.Add(this.JualBarangQty);
+            this.tbPenjualan.Controls.Add(this.lblInputQtyBarang);
+            this.tbPenjualan.Controls.Add(this.dgvBrowseBarang);
+            this.tbPenjualan.Controls.Add(this.JualBarangHarga);
+            this.tbPenjualan.Controls.Add(this.lblInputJualBarang);
+            this.tbPenjualan.Controls.Add(this.JualBarangNama);
+            this.tbPenjualan.Controls.Add(this.lblInputNamaBarang);
+            this.tbPenjualan.Controls.Add(this.JualBarangKode);
+            this.tbPenjualan.Controls.Add(this.barangBrowse);
+            this.tbPenjualan.Controls.Add(this.lblInputKodeBarang);
+            this.tbPenjualan.Controls.Add(this.dgvBrowseCustomer);
+            this.tbPenjualan.Controls.Add(this.JualCustomerHp);
+            this.tbPenjualan.Controls.Add(this.lblJualHp);
+            this.tbPenjualan.Controls.Add(this.JualCustomerKode);
+            this.tbPenjualan.Controls.Add(this.customerBrowse);
+            this.tbPenjualan.Controls.Add(this.lblKodeCustomer);
+            this.tbPenjualan.Controls.Add(this.JualCustomerAlamat);
+            this.tbPenjualan.Controls.Add(this.lblJualAlamat);
+            this.tbPenjualan.Controls.Add(this.JualCustomerNama);
+            this.tbPenjualan.Controls.Add(this.lblJualCustomer);
+            this.tbPenjualan.Controls.Add(this.dgvDetail);
+            this.tbPenjualan.HorizontalScrollbarBarColor = true;
+            this.tbPenjualan.Location = new System.Drawing.Point(4, 35);
+            this.tbPenjualan.Name = "tbPenjualan";
+            this.tbPenjualan.Size = new System.Drawing.Size(974, 282);
+            this.tbPenjualan.TabIndex = 1;
+            this.tbPenjualan.Text = "PENJUALAN";
+            this.tbPenjualan.VerticalScrollbarBarColor = true;
             // 
-            // JualAlamat
+            // JualCustomerAlamat
             // 
-            this.JualAlamat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.JualAlamat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JualAlamat.Location = new System.Drawing.Point(140, 104);
-            this.JualAlamat.Name = "JualAlamat";
-            this.JualAlamat.Size = new System.Drawing.Size(167, 25);
-            this.JualAlamat.TabIndex = 88;
+            this.JualCustomerAlamat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JualCustomerAlamat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JualCustomerAlamat.Location = new System.Drawing.Point(141, 55);
+            this.JualCustomerAlamat.Name = "JualCustomerAlamat";
+            this.JualCustomerAlamat.Size = new System.Drawing.Size(167, 25);
+            this.JualCustomerAlamat.TabIndex = 88;
             // 
             // lblJualAlamat
             // 
             this.lblJualAlamat.AutoSize = true;
-            this.lblJualAlamat.Location = new System.Drawing.Point(0, 104);
+            this.lblJualAlamat.Location = new System.Drawing.Point(1, 55);
             this.lblJualAlamat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJualAlamat.Name = "lblJualAlamat";
             this.lblJualAlamat.Size = new System.Drawing.Size(61, 19);
             this.lblJualAlamat.TabIndex = 87;
             this.lblJualAlamat.Text = "ALAMAT";
             // 
-            // JualCustomer
+            // JualCustomerNama
             // 
-            this.JualCustomer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.JualCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JualCustomer.Location = new System.Drawing.Point(140, 77);
-            this.JualCustomer.Name = "JualCustomer";
-            this.JualCustomer.Size = new System.Drawing.Size(200, 25);
-            this.JualCustomer.TabIndex = 86;
+            this.JualCustomerNama.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JualCustomerNama.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JualCustomerNama.Location = new System.Drawing.Point(141, 28);
+            this.JualCustomerNama.Name = "JualCustomerNama";
+            this.JualCustomerNama.Size = new System.Drawing.Size(200, 25);
+            this.JualCustomerNama.TabIndex = 86;
             // 
             // lblJualCustomer
             // 
             this.lblJualCustomer.AutoSize = true;
-            this.lblJualCustomer.Location = new System.Drawing.Point(0, 77);
+            this.lblJualCustomer.Location = new System.Drawing.Point(1, 28);
             this.lblJualCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblJualCustomer.Name = "lblJualCustomer";
             this.lblJualCustomer.Size = new System.Drawing.Size(123, 19);
             this.lblJualCustomer.TabIndex = 85;
             this.lblJualCustomer.Text = "NAMA CUSTOMER";
             // 
-            // JualNama
+            // dgvDetail
             // 
-            this.JualNama.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.JualNama.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JualNama.Location = new System.Drawing.Point(140, 50);
-            this.JualNama.Name = "JualNama";
-            this.JualNama.Size = new System.Drawing.Size(200, 25);
-            this.JualNama.TabIndex = 84;
+            this.dgvDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDetail.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDetail.BackgroundColor = System.Drawing.SystemColors.InactiveBorder;
+            this.dgvDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDetail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvDetail.ColumnHeadersHeight = 22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetail.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvDetail.GridColor = System.Drawing.SystemColors.Window;
+            this.dgvDetail.Location = new System.Drawing.Point(-3, 175);
+            this.dgvDetail.Name = "dgvDetail";
+            this.dgvDetail.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDetail.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvDetail.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDetail.Size = new System.Drawing.Size(854, 130);
+            this.dgvDetail.TabIndex = 63;
             // 
-            // JualKode
+            // tbPembelian
             // 
-            this.JualKode.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.JualKode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JualKode.Location = new System.Drawing.Point(140, 24);
-            this.JualKode.Name = "JualKode";
-            this.JualKode.Size = new System.Drawing.Size(100, 25);
-            this.JualKode.TabIndex = 83;
-            // 
-            // lblJualTanggal
-            // 
-            this.lblJualTanggal.AutoSize = true;
-            this.lblJualTanggal.Location = new System.Drawing.Point(0, 50);
-            this.lblJualTanggal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblJualTanggal.Name = "lblJualTanggal";
-            this.lblJualTanggal.Size = new System.Drawing.Size(68, 19);
-            this.lblJualTanggal.TabIndex = 82;
-            this.lblJualTanggal.Text = "TANGGAL";
-            // 
-            // lblJualNoBatch
-            // 
-            this.lblJualNoBatch.AutoSize = true;
-            this.lblJualNoBatch.BackColor = System.Drawing.SystemColors.Control;
-            this.lblJualNoBatch.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblJualNoBatch.Location = new System.Drawing.Point(0, 24);
-            this.lblJualNoBatch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblJualNoBatch.Name = "lblJualNoBatch";
-            this.lblJualNoBatch.Size = new System.Drawing.Size(76, 19);
-            this.lblJualNoBatch.TabIndex = 81;
-            this.lblJualNoBatch.Text = "NO BATCH";
-            // 
-            // dgvDetailJual
-            // 
-            this.dgvDetailJual.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvDetailJual.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvDetailJual.BackgroundColor = System.Drawing.SystemColors.InactiveBorder;
-            this.dgvDetailJual.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDetailJual.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvDetailJual.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetailJual.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
-            this.dgvDetailJual.ColumnHeadersHeight = 22;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetailJual.DefaultCellStyle = dataGridViewCellStyle38;
-            this.dgvDetailJual.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvDetailJual.GridColor = System.Drawing.SystemColors.Window;
-            this.dgvDetailJual.Location = new System.Drawing.Point(0, 175);
-            this.dgvDetailJual.Name = "dgvDetailJual";
-            this.dgvDetailJual.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvDetailJual.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvDetailJual.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDetailJual.Size = new System.Drawing.Size(685, 107);
-            this.dgvDetailJual.TabIndex = 63;
-            // 
-            // mtbPembelian
-            // 
-            this.mtbPembelian.Controls.Add(this.NamaSupplier);
-            this.mtbPembelian.Controls.Add(this.lblBeliNamaSupplier);
-            this.mtbPembelian.Controls.Add(this.BeliSupplier);
-            this.mtbPembelian.Controls.Add(this.lblBeliSupplier);
-            this.mtbPembelian.Controls.Add(this.BeliTanggal);
-            this.mtbPembelian.Controls.Add(this.BeliNoBatch);
-            this.mtbPembelian.Controls.Add(this.lblBeliTanggal);
-            this.mtbPembelian.Controls.Add(this.lblBeliNoBatch);
-            this.mtbPembelian.Controls.Add(this.dgvDetailBeli);
-            this.mtbPembelian.HorizontalScrollbarBarColor = true;
-            this.mtbPembelian.Location = new System.Drawing.Point(4, 35);
-            this.mtbPembelian.Name = "mtbPembelian";
-            this.mtbPembelian.Size = new System.Drawing.Size(685, 282);
-            this.mtbPembelian.TabIndex = 2;
-            this.mtbPembelian.Text = "PEMBELIAN";
-            this.mtbPembelian.VerticalScrollbarBarColor = true;
+            this.tbPembelian.Controls.Add(this.NamaSupplier);
+            this.tbPembelian.Controls.Add(this.lblBeliNamaSupplier);
+            this.tbPembelian.Controls.Add(this.BeliSupplier);
+            this.tbPembelian.Controls.Add(this.lblBeliSupplier);
+            this.tbPembelian.Controls.Add(this.BeliTanggal);
+            this.tbPembelian.Controls.Add(this.BeliNoBatch);
+            this.tbPembelian.Controls.Add(this.lblBeliTanggal);
+            this.tbPembelian.Controls.Add(this.lblBeliNoBatch);
+            this.tbPembelian.Controls.Add(this.dgvDetailBeli);
+            this.tbPembelian.HorizontalScrollbarBarColor = true;
+            this.tbPembelian.Location = new System.Drawing.Point(4, 35);
+            this.tbPembelian.Name = "tbPembelian";
+            this.tbPembelian.Size = new System.Drawing.Size(838, 282);
+            this.tbPembelian.TabIndex = 2;
+            this.tbPembelian.Text = "PEMBELIAN";
+            this.tbPembelian.VerticalScrollbarBarColor = true;
             // 
             // NamaSupplier
             // 
@@ -889,23 +880,23 @@
             this.dgvDetailBeli.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDetailBeli.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvDetailBeli.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetailBeli.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetailBeli.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDetailBeli.ColumnHeadersHeight = 22;
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetailBeli.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetailBeli.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvDetailBeli.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvDetailBeli.GridColor = System.Drawing.SystemColors.Window;
             this.dgvDetailBeli.Location = new System.Drawing.Point(0, 175);
@@ -913,8 +904,224 @@
             this.dgvDetailBeli.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDetailBeli.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvDetailBeli.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDetailBeli.Size = new System.Drawing.Size(685, 107);
+            this.dgvDetailBeli.Size = new System.Drawing.Size(838, 107);
             this.dgvDetailBeli.TabIndex = 72;
+            // 
+            // JualCustomerKode
+            // 
+            this.JualCustomerKode.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JualCustomerKode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JualCustomerKode.Location = new System.Drawing.Point(238, 3);
+            this.JualCustomerKode.Name = "JualCustomerKode";
+            this.JualCustomerKode.Size = new System.Drawing.Size(102, 25);
+            this.JualCustomerKode.TabIndex = 90;
+            // 
+            // lblKodeCustomer
+            // 
+            this.lblKodeCustomer.AutoSize = true;
+            this.lblKodeCustomer.Location = new System.Drawing.Point(1, 3);
+            this.lblKodeCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKodeCustomer.Name = "lblKodeCustomer";
+            this.lblKodeCustomer.Size = new System.Drawing.Size(117, 19);
+            this.lblKodeCustomer.TabIndex = 89;
+            this.lblKodeCustomer.Text = "KODE CUSTOMER";
+            // 
+            // customerBrowse
+            // 
+            this.customerBrowse.BackColor = System.Drawing.Color.White;
+            this.customerBrowse.Location = new System.Drawing.Point(141, 3);
+            this.customerBrowse.Name = "customerBrowse";
+            this.customerBrowse.Size = new System.Drawing.Size(91, 25);
+            this.customerBrowse.TabIndex = 91;
+            this.customerBrowse.Text = "Browse";
+            this.customerBrowse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customerBrowse.Click += new System.EventHandler(this.customerBrowse_Click);
+            // 
+            // dgvBrowseCustomer
+            // 
+            this.dgvBrowseCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvBrowseCustomer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvBrowseCustomer.BackgroundColor = System.Drawing.SystemColors.InactiveBorder;
+            this.dgvBrowseCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBrowseCustomer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvBrowseCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBrowseCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBrowseCustomer.ColumnHeadersHeight = 22;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBrowseCustomer.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvBrowseCustomer.GridColor = System.Drawing.SystemColors.Window;
+            this.dgvBrowseCustomer.Location = new System.Drawing.Point(358, 0);
+            this.dgvBrowseCustomer.Name = "dgvBrowseCustomer";
+            this.dgvBrowseCustomer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBrowseCustomer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvBrowseCustomer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvBrowseCustomer.Size = new System.Drawing.Size(606, 106);
+            this.dgvBrowseCustomer.TabIndex = 92;
+            this.dgvBrowseCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrowseCustomer_CellClick);
+            // 
+            // JualCustomerHp
+            // 
+            this.JualCustomerHp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JualCustomerHp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JualCustomerHp.Location = new System.Drawing.Point(141, 81);
+            this.JualCustomerHp.Name = "JualCustomerHp";
+            this.JualCustomerHp.Size = new System.Drawing.Size(167, 25);
+            this.JualCustomerHp.TabIndex = 93;
+            // 
+            // lblJualHp
+            // 
+            this.lblJualHp.AutoSize = true;
+            this.lblJualHp.Location = new System.Drawing.Point(1, 81);
+            this.lblJualHp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJualHp.Name = "lblJualHp";
+            this.lblJualHp.Size = new System.Drawing.Size(91, 19);
+            this.lblJualHp.TabIndex = 92;
+            this.lblJualHp.Text = "HANDPHONE";
+            // 
+            // dgvBrowseBarang
+            // 
+            this.dgvBrowseBarang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvBrowseBarang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvBrowseBarang.BackgroundColor = System.Drawing.SystemColors.InactiveBorder;
+            this.dgvBrowseBarang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBrowseBarang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvBrowseBarang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBrowseBarang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBrowseBarang.ColumnHeadersHeight = 22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBrowseBarang.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBrowseBarang.GridColor = System.Drawing.SystemColors.Window;
+            this.dgvBrowseBarang.Location = new System.Drawing.Point(-43, 144);
+            this.dgvBrowseBarang.Name = "dgvBrowseBarang";
+            this.dgvBrowseBarang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBrowseBarang.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvBrowseBarang.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvBrowseBarang.Size = new System.Drawing.Size(669, 170);
+            this.dgvBrowseBarang.TabIndex = 97;
+            this.dgvBrowseBarang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrowseBarang_CellClick);
+            // 
+            // JualBarangKode
+            // 
+            this.JualBarangKode.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JualBarangKode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JualBarangKode.Location = new System.Drawing.Point(-1, 144);
+            this.JualBarangKode.Name = "JualBarangKode";
+            this.JualBarangKode.Size = new System.Drawing.Size(102, 25);
+            this.JualBarangKode.TabIndex = 95;
+            // 
+            // barangBrowse
+            // 
+            this.barangBrowse.BackColor = System.Drawing.Color.White;
+            this.barangBrowse.Location = new System.Drawing.Point(632, 144);
+            this.barangBrowse.Name = "barangBrowse";
+            this.barangBrowse.Size = new System.Drawing.Size(91, 25);
+            this.barangBrowse.TabIndex = 96;
+            this.barangBrowse.Text = "Browse";
+            this.barangBrowse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.barangBrowse.Click += new System.EventHandler(this.barangBrowse_Click);
+            // 
+            // JualBarangNama
+            // 
+            this.JualBarangNama.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JualBarangNama.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JualBarangNama.Location = new System.Drawing.Point(100, 144);
+            this.JualBarangNama.Name = "JualBarangNama";
+            this.JualBarangNama.Size = new System.Drawing.Size(156, 25);
+            this.JualBarangNama.TabIndex = 98;
+            // 
+            // JualBarangHarga
+            // 
+            this.JualBarangHarga.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JualBarangHarga.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JualBarangHarga.Location = new System.Drawing.Point(254, 144);
+            this.JualBarangHarga.Name = "JualBarangHarga";
+            this.JualBarangHarga.Size = new System.Drawing.Size(156, 25);
+            this.JualBarangHarga.TabIndex = 100;
+            // 
+            // JualBarangQty
+            // 
+            this.JualBarangQty.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.JualBarangQty.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JualBarangQty.Location = new System.Drawing.Point(412, 144);
+            this.JualBarangQty.Name = "JualBarangQty";
+            this.JualBarangQty.Size = new System.Drawing.Size(156, 25);
+            this.JualBarangQty.TabIndex = 102;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(729, 144);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(91, 25);
+            this.btnAdd.TabIndex = 103;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblInputKodeBarang
+            // 
+            this.lblInputKodeBarang.AutoSize = true;
+            this.lblInputKodeBarang.Location = new System.Drawing.Point(-1, 122);
+            this.lblInputKodeBarang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInputKodeBarang.Name = "lblInputKodeBarang";
+            this.lblInputKodeBarang.Size = new System.Drawing.Size(100, 19);
+            this.lblInputKodeBarang.TabIndex = 94;
+            this.lblInputKodeBarang.Text = "KODE BARANG";
+            // 
+            // lblInputNamaBarang
+            // 
+            this.lblInputNamaBarang.AutoSize = true;
+            this.lblInputNamaBarang.Location = new System.Drawing.Point(103, 122);
+            this.lblInputNamaBarang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInputNamaBarang.Name = "lblInputNamaBarang";
+            this.lblInputNamaBarang.Size = new System.Drawing.Size(106, 19);
+            this.lblInputNamaBarang.TabIndex = 97;
+            this.lblInputNamaBarang.Text = "NAMA BARANG";
+            // 
+            // lblInputJualBarang
+            // 
+            this.lblInputJualBarang.AutoSize = true;
+            this.lblInputJualBarang.Location = new System.Drawing.Point(255, 122);
+            this.lblInputJualBarang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInputJualBarang.Name = "lblInputJualBarang";
+            this.lblInputJualBarang.Size = new System.Drawing.Size(86, 19);
+            this.lblInputJualBarang.TabIndex = 99;
+            this.lblInputJualBarang.Text = "HARGA JUAL";
+            // 
+            // lblInputQtyBarang
+            // 
+            this.lblInputQtyBarang.AutoSize = true;
+            this.lblInputQtyBarang.Location = new System.Drawing.Point(412, 122);
+            this.lblInputQtyBarang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInputQtyBarang.Name = "lblInputQtyBarang";
+            this.lblInputQtyBarang.Size = new System.Drawing.Size(68, 19);
+            this.lblInputQtyBarang.TabIndex = 101;
+            this.lblInputQtyBarang.Text = "QTY JUAL";
             // 
             // frmMain
             // 
@@ -943,12 +1150,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.gbNav.ResumeLayout(false);
             this.mtbTransc.ResumeLayout(false);
-            this.mtbPenjualan.ResumeLayout(false);
-            this.mtbPenjualan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetailJual)).EndInit();
-            this.mtbPembelian.ResumeLayout(false);
-            this.mtbPembelian.PerformLayout();
+            this.tbPenjualan.ResumeLayout(false);
+            this.tbPenjualan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).EndInit();
+            this.tbPembelian.ResumeLayout(false);
+            this.tbPembelian.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetailBeli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBrowseCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBrowseBarang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -998,17 +1207,13 @@
         private MetroFramework.Controls.MetroLabel lblSupplierNama;
         private MetroFramework.Controls.MetroLabel lblSupplierKode;
         private MetroFramework.Controls.MetroTabControl mtbTransc;
-        private MetroFramework.Controls.MetroTabPage mtbPenjualan;
-        private System.Windows.Forms.TextBox JualAlamat;
+        private MetroFramework.Controls.MetroTabPage tbPenjualan;
+        private System.Windows.Forms.TextBox JualCustomerAlamat;
         private MetroFramework.Controls.MetroLabel lblJualAlamat;
-        private System.Windows.Forms.TextBox JualCustomer;
+        private System.Windows.Forms.TextBox JualCustomerNama;
         private MetroFramework.Controls.MetroLabel lblJualCustomer;
-        private System.Windows.Forms.TextBox JualNama;
-        private System.Windows.Forms.TextBox JualKode;
-        private MetroFramework.Controls.MetroLabel lblJualTanggal;
-        private MetroFramework.Controls.MetroLabel lblJualNoBatch;
-        private System.Windows.Forms.DataGridView dgvDetailJual;
-        private MetroFramework.Controls.MetroTabPage mtbPembelian;
+        private System.Windows.Forms.DataGridView dgvDetail;
+        private MetroFramework.Controls.MetroTabPage tbPembelian;
         private System.Windows.Forms.TextBox NamaSupplier;
         private MetroFramework.Controls.MetroLabel lblBeliNamaSupplier;
         private System.Windows.Forms.TextBox BeliSupplier;
@@ -1018,6 +1223,23 @@
         private MetroFramework.Controls.MetroLabel lblBeliTanggal;
         private MetroFramework.Controls.MetroLabel lblBeliNoBatch;
         private System.Windows.Forms.DataGridView dgvDetailBeli;
+        private System.Windows.Forms.TextBox JualCustomerKode;
+        private MetroFramework.Controls.MetroLabel lblKodeCustomer;
+        private MetroFramework.Controls.MetroTile customerBrowse;
+        private System.Windows.Forms.DataGridView dgvBrowseCustomer;
+        private System.Windows.Forms.TextBox JualCustomerHp;
+        private MetroFramework.Controls.MetroLabel lblJualHp;
+        private System.Windows.Forms.DataGridView dgvBrowseBarang;
+        private System.Windows.Forms.TextBox JualBarangKode;
+        private MetroFramework.Controls.MetroTile barangBrowse;
+        private System.Windows.Forms.TextBox JualBarangNama;
+        private System.Windows.Forms.TextBox JualBarangHarga;
+        private System.Windows.Forms.TextBox JualBarangQty;
+        private MetroFramework.Controls.MetroTile btnAdd;
+        private MetroFramework.Controls.MetroLabel lblInputQtyBarang;
+        private MetroFramework.Controls.MetroLabel lblInputJualBarang;
+        private MetroFramework.Controls.MetroLabel lblInputNamaBarang;
+        private MetroFramework.Controls.MetroLabel lblInputKodeBarang;
 
     }
 }

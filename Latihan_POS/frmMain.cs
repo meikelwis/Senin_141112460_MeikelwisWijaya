@@ -28,6 +28,8 @@ namespace Latihan_POS
             InitializeData();
             mtbRegis.BringToFront();
             mtbRegis.SelectedTab = tbBarang;
+            dgvBrowseCustomer.Visible = false;
+            dgvBrowseBarang.Visible = false;
         }
         private void InitializeData()
         {
@@ -45,6 +47,7 @@ namespace Latihan_POS
             DataTable dtBarang = new DataTable();
             BindingSource bsBarang = new BindingSource();
             bsBarang.DataSource = dtBarang;
+            #region Barang
             dgvBarang.DataSource = bsBarang;
             dgvBarang.ReadOnly = true;
             dgvBarang.MultiSelect = false;
@@ -58,6 +61,27 @@ namespace Latihan_POS
             dgvBarang.Columns[2].HeaderText = "Jumlah Awal";
             dgvBarang.Columns[3].HeaderText = "Harga HPP";
             dgvBarang.Columns[4].HeaderText = "Harga Jual";
+
+            #endregion Barang
+            
+            #region BrowseBarang
+            dgvBrowseBarang.DataSource = bsBarang;
+            dgvBrowseBarang.ReadOnly = true;
+            dgvBrowseBarang.MultiSelect = false;
+            dgvBrowseBarang.AllowUserToAddRows = false;
+            dgvBrowseBarang.AllowUserToDeleteRows = false;
+            dgvBrowseBarang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvBrowseBarang.DataSource = dsBarang.Tables["MSTBARANG"];
+            //Tuk ganti judul header kolom
+            dgvBrowseBarang.Columns[0].HeaderText = "Kode Barang";
+            dgvBrowseBarang.Columns[1].HeaderText = "Nama Barang";
+            dgvBrowseBarang.Columns[2].HeaderText = "Jumlah Awal";
+            dgvBrowseBarang.Columns[3].HeaderText = "Harga HPP";
+            dgvBrowseBarang.Columns[4].HeaderText = "Harga Jual";
+            JualBarangKode.Enabled = false;
+            JualBarangNama.Enabled = false;
+            JualBarangHarga.Enabled = false;
+            #endregion BrowseBarang
             //-------------------------------------------------------------------------
             //Initialisasi data Customer
             DataSet dsCustomer = new DataSet();
@@ -66,6 +90,8 @@ namespace Latihan_POS
             DataTable dtCustomer = new DataTable();
             BindingSource bsCustomer = new BindingSource();
             bsCustomer.DataSource = dtCustomer;
+
+            #region Customer
             dgvCustomer.DataSource = bsCustomer;
             dgvCustomer.ReadOnly = true;
             dgvCustomer.MultiSelect = false;
@@ -78,6 +104,33 @@ namespace Latihan_POS
             dgvCustomer.Columns[1].HeaderText = "Nama Customer";
             dgvCustomer.Columns[2].HeaderText = "Alamat Customer";
             dgvCustomer.Columns[3].HeaderText = "Handphone";
+
+            #endregion Customer
+
+            #region BrowseCustomer
+            //untuk browseCustomer
+            dgvBrowseCustomer.DataSource = bsCustomer;
+            dgvBrowseCustomer.ReadOnly = true;
+            dgvBrowseCustomer.MultiSelect = false;
+            dgvBrowseCustomer.AllowUserToAddRows = false;
+            dgvBrowseCustomer.AllowUserToDeleteRows = false;
+            dgvBrowseCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvBrowseCustomer.DataSource = dsCustomer.Tables["MSTCUSTOMER"];
+
+            dgvBrowseCustomer.Columns[0].HeaderText = "Kode Customer";
+            dgvBrowseCustomer.Columns[1].HeaderText = "Nama Customer";
+            dgvBrowseCustomer.Columns[2].HeaderText = "Alamat Customer";
+            dgvBrowseCustomer.Columns[3].HeaderText = "Handphone";
+            #endregion BrowseCustomer
+            //Tuk ganti judul header kolom
+            dgvCustomer.Columns[0].HeaderText = "Kode Customer";
+            dgvCustomer.Columns[1].HeaderText = "Nama Customer";
+            dgvCustomer.Columns[2].HeaderText = "Alamat Customer";
+            dgvCustomer.Columns[3].HeaderText = "Handphone";
+            JualCustomerKode.Enabled = false;
+            JualCustomerNama.Enabled = false;
+            JualCustomerAlamat.Enabled = false;
+            JualCustomerHp.Enabled = false;
             //-------------------------------------------------------------------------
             //Initialisasi data supplier
             DataSet dsSupplier = new DataSet();
@@ -114,14 +167,17 @@ namespace Latihan_POS
             if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbBarang"]) BarangKode.Focus();
             if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbCustomer"]) CustomerKode.Focus();
             if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbSupplier"]) SupplierKode.Focus();
+
+            
+           
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             ProcessData();
-            ClearData();
             isInsert = false;
             isUpdate = false;
             isDelete = false;
+            ClearData();
             if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbBarang"]) BarangKode.Focus();
             if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbCustomer"]) CustomerKode.Focus();
             if (mtbRegis.SelectedTab == mtbRegis.TabPages["tbSupplier"]) SupplierKode.Focus();
@@ -216,6 +272,32 @@ namespace Latihan_POS
             isUpdate = true;
             isInsert = false;
             isDelete = false;
+        }
+        private void customerBrowse_Click(object sender, EventArgs e)
+        {
+            dgvBrowseCustomer.Visible = !dgvBrowseCustomer.Visible;
+        }
+
+        private void dgvBrowseCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            JualCustomerKode.Text = dgvCustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
+            JualCustomerNama.Text = dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
+            JualCustomerAlamat.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
+            JualCustomerHp.Text = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dgvBrowseCustomer.Visible = !dgvBrowseCustomer.Visible;
+        }
+        private void barangBrowse_Click(object sender, EventArgs e)
+        {
+            dgvBrowseBarang.BringToFront();
+            dgvBrowseBarang.Visible = !dgvBrowseBarang.Visible;
+        }
+
+        private void dgvBrowseBarang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            JualBarangKode.Text = dgvBrowseBarang.Rows[e.RowIndex].Cells[0].Value.ToString();
+            JualBarangNama.Text = dgvBrowseBarang.Rows[e.RowIndex].Cells[1].Value.ToString();
+            JualBarangHarga.Text = dgvBrowseBarang.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dgvBrowseBarang.Visible = !dgvBrowseBarang.Visible;
         }
         //Method Untuk Cek Validasi
         private bool isValid()
@@ -383,7 +465,11 @@ namespace Latihan_POS
         private void btnTrans_Click(object sender, EventArgs e)
         {
             mtbTransc.BringToFront();
+            MessageBox.Show("Use Browse Button to Find And Fill Data (Gunakan Tombol Browse Untuk Mencari dan Mengisi Data )","Information");
         }
+
+
+       
 
 
 
